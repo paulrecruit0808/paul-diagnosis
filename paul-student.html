@@ -270,12 +270,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku
       </div>
     </div>
     <button class="btn-main" onclick="resetAll()">もう一度診断する 🔄</button>
-    <!-- スタッフ用リンクカード -->
+    <!-- スタッフ用QRカード -->
     <div id="qr-card" style="display:none;background:rgba(42,37,37,.04);border:2px dashed rgba(42,37,37,.18);border-radius:20px;padding:22px;margin-bottom:14px;text-align:center">
       <div style="font-size:13px;font-weight:700;color:var(--charcoal);margin-bottom:6px">📋 スタッフの方へ</div>
-      <div style="font-size:11px;color:var(--gray);font-weight:300;line-height:1.7;margin-bottom:14px">下のボタンからトークマニュアルを確認できます</div>
-      <a id="staff-link" href="#" target="_blank" style="display:block;padding:14px;background:linear-gradient(135deg,#363030,#5a5050);color:white;border-radius:14px;font-size:13px;font-weight:700;text-decoration:none;letter-spacing:.1em">🗣 トークマニュアルを開く</a>
-      <div style="font-size:10px;color:var(--gray);margin-top:10px;font-weight:300">※学生の画面にはトーク内容は表示されません</div>
+      <div style="font-size:11px;color:var(--gray);font-weight:300;line-height:1.7;margin-bottom:14px">このQRをスキャンすると<br>この学生のトークマニュアルが開きます</div>
+      <div id="qr-box" style="display:flex;justify-content:center;margin-bottom:12px"></div>
+      <div style="font-size:10px;color:var(--gray);margin-top:6px;font-weight:300">※学生の画面にはトーク内容は表示されません</div>
     </div>
     <div style="height:24px"></div>
   </div>
@@ -284,7 +284,27 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku
 
 <script>
 // スタッフモード内蔵（同じURLに?staff=1をつけるだけでOK）
-const STAFF_URL_BASE = 'https://paulrecruit0808.github.io/paul-diagnosis/paul-student.html';
+const STAFF_URL_BASE = location.href.split('?')[0];
+
+// ── QRコード生成（外部ライブラリなし・Safari完全対応）──
+// QRコードをSVGで生成するシンプルな実装
+function makeQRSVG(url) {
+  // URLをエンコードしてQR用のデータを作る
+  // シンプルにGoogle Charts APIを使う（オフライン不可だがURLさえ生成できればOK）
+  const encoded = encodeURIComponent(url);
+  const size = 180;
+  const img = document.createElement('img');
+  img.src = `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&data=${encoded}&margin=10`;
+  img.width = size;
+  img.height = size;
+  img.style.cssText = 'border-radius:12px;border:4px solid white;box-shadow:0 4px 16px rgba(0,0,0,.1)';
+  img.onerror = function(){
+    // オフライン時のフォールバック：リンクボタンを表示
+    const box = document.getElementById('qr-box');
+    box.innerHTML = `<a href="${url}" target="_blank" style="display:block;padding:14px 20px;background:linear-gradient(135deg,#363030,#5a5050);color:white;border-radius:14px;font-size:13px;font-weight:700;text-decoration:none">🗣 トークマニュアルを開く</a>`;
+  };
+  return img;
+}
 
 // ── スタッフモード判定 ──
 (function(){
@@ -461,9 +481,11 @@ function renderResult(){
   renderTimeline();
   if(ans.q6==='real')document.getElementById('chip-real').style.fontWeight='700';
   else if(ans.q6==='online')document.getElementById('chip-online').style.fontWeight='700';
-  // スタッフ用リンク生成（同じURLに?staff=1をつけるだけ）
+  // スタッフ用QRコード生成
   const staffUrl=`${STAFF_URL_BASE}?staff=1&type=${best}&name=${encodeURIComponent(profile.name)}&school=${encodeURIComponent(profile.school)}&grade=${encodeURIComponent(profile.grade)}&q3=${ans.q3||''}&q4=${ans.q4||''}&q6=${ans.q6||''}&mbti=${mbtiCode}`;
-  document.getElementById('staff-link').href=staffUrl;
+  const qrBox=document.getElementById('qr-box');
+  qrBox.innerHTML='';
+  qrBox.appendChild(makeQRSVG(staffUrl));
   document.getElementById('qr-card').style.display='block';
   showScr('result');
 }
