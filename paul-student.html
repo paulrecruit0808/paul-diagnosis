@@ -286,6 +286,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku
 // スタッフモード内蔵（同じURLに?staff=1をつけるだけでOK）
 const STAFF_URL_BASE = location.href.split('?')[0];
 
+// ★ Google Apps Script のURL
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyC9io8fO7-nZuUauSr1gk5p6mp6Bxg2FE7t5vRv3xF_3XWBPHXvRS875THrUQM8gcPvg/exec';
+
 // ── QRコード生成（外部ライブラリなし・Safari完全対応）──
 // QRコードをSVGで生成するシンプルな実装
 function makeQRSVG(url) {
@@ -487,6 +490,27 @@ function renderResult(){
   qrBox.innerHTML='';
   qrBox.appendChild(makeQRSVG(staffUrl));
   document.getElementById('qr-card').style.display='block';
+
+  // スプレッドシートにデータ送信
+  const Q_LABELS={human:'👥 人間関係',edu:'📚 教育・成長',salary:'💰 給料・収入',welfare:'🌿 福利厚生',real:'🏠 リアル見学',online:'💻 オンライン'};
+  const record={
+    timestamp: new Date().toLocaleString('ja-JP'),
+    name: profile.name,
+    school: profile.school,
+    grade: profile.grade,
+    typeName: t.name,
+    q3label: Q_LABELS[ans.q3]||ans.q3||'',
+    q4label: Q_LABELS[ans.q4]||ans.q4||'',
+    visit: Q_LABELS[ans.q6]||ans.q6||'',
+    mbti: mbtiCode||'未入力',
+    joinMonth: profile.joinMonth||'未定'
+  };
+  fetch(GAS_URL, {
+    method:'POST',
+    mode:'no-cors',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(record)
+  }).catch(()=>{});
   showScr('result');
 }
 
