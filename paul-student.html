@@ -186,6 +186,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku
       </div>
     </div>
     <div class="inp-group">
+      <label class="inp-label">🎂 生年月日</label>
+      <input class="inp" id="inp-birthday" type="date" oninput="checkProfile()" style="font-size:16px">
+      <div style="font-size:10px;color:var(--gray);margin-top:5px;font-weight:300">✨ 数秘術で美容師運命数を診断します</div>
+    </div>
+    <div class="inp-group">
+      <label class="inp-label">🩸 血液型</label>
+      <div class="grade-row" id="grade-row-blood">
+        <button class="grade-btn" data-blood="A">A型</button>
+        <button class="grade-btn" data-blood="B">B型</button>
+        <button class="grade-btn" data-blood="O">O型</button>
+        <button class="grade-btn" data-blood="AB">AB型</button>
+        <button class="grade-btn" data-blood="不明">不明</button>
+      </div>
+    </div>
+    <div class="inp-group">
       <label class="inp-label">🗓 入社予定年</label>
       <div class="grade-row" id="grade-row-join">
         <button class="grade-btn" onclick="pickJoinMonth('2026年4月',this)">2026年</button>
@@ -200,11 +215,39 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku
 </div>
 
 <!-- Q1〜Q6 -->
-<div class="scr" id="scr-q1"><div class="card"><div class="q-num-badge">Q1 / 06</div><div class="q-text">美容師の仕事で、いちばん大切にしたいことは？</div><div class="opts" id="opts-q1"><button class="opt" onclick="pick('q1','S',this)"><div class="radio"></div><span>お客様との会話・信頼関係を育てること</span></button><button class="opt" onclick="pick('q1','T',this)"><div class="radio"></div><span>技術を磨いて圧倒的なクオリティを出すこと</span></button><button class="opt" onclick="pick('q1','C',this)"><div class="radio"></div><span>ビジュアルやセンスで人を惹きつけること</span></button><button class="opt" onclick="pick('q1','L',this)"><div class="radio"></div><span>チームを引っ張り、将来は社内独立・マネジメントも視野に</span></button></div></div><button class="btn-main" id="btn-q1" disabled onclick="go(2)">次へ →</button></div>
-<div class="scr" id="scr-q2"><div class="card"><div class="q-num-badge">Q2 / 06</div><div class="q-text">3年後の自分、どんなイメージ？</div><div class="opts" id="opts-q2"><button class="opt" onclick="pick('q2','S',this)"><div class="radio"></div><span>指名客がいっぱいで、常連さんに頼られるスタイリスト</span></button><button class="opt" onclick="pick('q2','T',this)"><div class="radio"></div><span>コンテストや技術面でサロントップを走っている</span></button><button class="opt" onclick="pick('q2','C',this)"><div class="radio"></div><span>自分のスタイルで人を魅了する、唯一無二の存在</span></button><button class="opt" onclick="pick('q2','L',this)"><div class="radio"></div><span>後輩を育てチームをまとめる立場になっている</span></button></div></div><button class="btn-main" id="btn-q2" disabled onclick="go(3)">次へ →</button></div>
+<div class="scr" id="scr-q1"><div class="card"><div class="q-num-badge">Q1 / 06</div><div class="q-text">美容師として、いちばんなりたい姿は？</div><div class="opts" id="opts-q1">
+<button class="opt" onclick="pick('q1','A',this)"><div class="radio"></div><span>🌸 お客様に「あなたじゃなきゃ！」と言われる指名No.1スタイリスト</span></button>
+<button class="opt" onclick="pick('q1','B',this)"><div class="radio"></div><span>⚡ 技術を極めてコンテストで結果を出す職人スタイリスト</span></button>
+<button class="opt" onclick="pick('q1','C',this)"><div class="radio"></div><span>📸 SNSでフォロワーを増やして有名になるスタイリスト</span></button>
+<button class="opt" onclick="pick('q1','D',this)"><div class="radio"></div><span>💰 美容師でしっかり稼いで人生を豊かにするスタイリスト</span></button>
+<button class="opt" onclick="pick('q1','E',this)"><div class="radio"></div><span>🔥 早く店長になってチームを引っ張るリーダースタイリスト</span></button>
+<button class="opt" onclick="pick('q1','F',this)"><div class="radio"></div><span>💆 癒しを届けてお客様の心と体を整えるスペシャリスト</span></button>
+<button class="opt" onclick="pick('q1','G',this)"><div class="radio"></div><span>💫 業界のトレンドを作って発信するクリエイタースタイリスト</span></button>
+<button class="opt" onclick="pick('q1','H',this)"><div class="radio"></div><span>💝 お客様の人生の節目に寄り添うかかりつけ美容師</span></button>
+</div></div><button class="btn-main" id="btn-q1" disabled onclick="go(2)">次へ →</button></div>
+
+<div class="scr" id="scr-q2"><div class="card"><div class="q-num-badge">Q2 / 06</div><div class="q-text">仕事でいちばんモチベーションが上がる瞬間は？</div><div class="opts" id="opts-q2">
+<button class="opt" onclick="pick('q2','A',this)"><div class="radio"></div><span>🌸 「またあなたにお願いしたい！」と言ってもらえたとき</span></button>
+<button class="opt" onclick="pick('q2','B',this)"><div class="radio"></div><span>⚡ 難しい技術がピタッと決まったとき</span></button>
+<button class="opt" onclick="pick('q2','C',this)"><div class="radio"></div><span>📸 自分の投稿がバズって反響があったとき</span></button>
+<button class="opt" onclick="pick('q2','D',this)"><div class="radio"></div><span>💰 売上・指名数の目標を達成したとき</span></button>
+<button class="opt" onclick="pick('q2','E',this)"><div class="radio"></div><span>🔥 後輩が成長したとき・チームが目標達成したとき</span></button>
+<button class="opt" onclick="pick('q2','F',this)"><div class="radio"></div><span>💆 お客様に「癒された〜！」と言ってもらえたとき</span></button>
+<button class="opt" onclick="pick('q2','G',this)"><div class="radio"></div><span>💫 自分が作ったスタイルがトレンドになったとき</span></button>
+<button class="opt" onclick="pick('q2','H',this)"><div class="radio"></div><span>💝 長く通ってくれるお客様が「ここが一番好き」と言ってくれたとき</span></button>
+</div></div><button class="btn-main" id="btn-q2" disabled onclick="go(3)">次へ →</button></div>
 <div class="scr" id="scr-q3"><div class="card"><div class="q-num-badge">Q3 / 06</div><div class="q-text">就職先を選ぶとき、正直いちばん気になるのは？</div><div class="opts" id="opts-q3"><button class="opt" onclick="pick('q3','human',this)"><div class="radio"></div><div><span style="font-size:10px;font-weight:700;color:#c08080;display:block;margin-bottom:3px">👥 人間関係</span>職場の雰囲気・先輩との関係・社内イベントなど</div></button><button class="opt" onclick="pick('q3','edu',this)"><div class="radio"></div><div><span style="font-size:10px;font-weight:700;color:#5080b0;display:block;margin-bottom:3px">📚 教育・成長</span>アカデミー・カリキュラム・デビューまでの流れ</div></button><button class="opt" onclick="pick('q3','salary',this)"><div class="radio"></div><div><span style="font-size:10px;font-weight:700;color:#908020;display:block;margin-bottom:3px">💰 給料・収入</span>初任給・スタイリスト後の給料・歩合のしくみ</div></button><button class="opt" onclick="pick('q3','welfare',this)"><div class="radio"></div><div><span style="font-size:10px;font-weight:700;color:#407040;display:block;margin-bottom:3px">🌿 福利厚生</span>各種手当・一人暮らし支援・休みの取りやすさ</div></button></div></div><button class="btn-main" id="btn-q3" disabled onclick="go(4)">次へ →</button></div>
 <div class="scr" id="scr-q4"><div class="card"><div class="q-num-badge">Q4 / 06</div><div class="q-text">就職にあたって、いちばん不安に感じることは？</div><div class="opts" id="opts-q4"><button class="opt" onclick="pick('q4','human',this)"><div class="radio"></div><div><span style="font-size:10px;font-weight:700;color:#c08080;display:block;margin-bottom:3px">👥 人間関係</span>職場に馴染めるか・先輩が怖くないか心配</div></button><button class="opt" onclick="pick('q4','edu',this)"><div class="radio"></div><div><span style="font-size:10px;font-weight:700;color:#5080b0;display:block;margin-bottom:3px">📚 教育・成長</span>技術が追いつくか・デビューまで長くないか不安</div></button><button class="opt" onclick="pick('q4','salary',this)"><div class="radio"></div><div><span style="font-size:10px;font-weight:700;color:#908020;display:block;margin-bottom:3px">💰 給料・収入</span>アシスタント中の収入でやっていけるか心配</div></button><button class="opt" onclick="pick('q4','welfare',this)"><div class="radio"></div><div><span style="font-size:10px;font-weight:700;color:#407040;display:block;margin-bottom:3px">🌿 福利厚生</span>一人暮らしや生活面でサポートがあるか不安</div></button></div></div><button class="btn-main" id="btn-q4" disabled onclick="go(5)">次へ →</button></div>
-<div class="scr" id="scr-q5"><div class="card"><div class="q-num-badge">Q5 / 06</div><div class="q-text">仕事でいちばんモチベーションが上がる瞬間は？</div><div class="opts" id="opts-q5"><button class="opt" onclick="pick('q5','S',this)"><div class="radio"></div><span>「またあなたにお願いしたい」と言ってもらえたとき</span></button><button class="opt" onclick="pick('q5','T',this)"><div class="radio"></div><span>難しい技術がうまく決まったとき</span></button><button class="opt" onclick="pick('q5','C',this)"><div class="radio"></div><span>自分のセンスが誰かの「かわいい」になったとき</span></button><button class="opt" onclick="pick('q5','L',this)"><div class="radio"></div><span>後輩が成長したとき、目標の数字を達成したとき</span></button></div></div><button class="btn-main" id="btn-q5" disabled onclick="go(6)">次へ →</button></div>
+<div class="scr" id="scr-q5"><div class="card"><div class="q-num-badge">Q5 / 06</div><div class="q-text">5年後の自分、どんな美容師になってる？</div><div class="opts" id="opts-q5">
+<button class="opt" onclick="pick('q5','A',this)"><div class="radio"></div><span>🌸 指名客がたくさんいて、予約が埋まってる人気スタイリスト</span></button>
+<button class="opt" onclick="pick('q5','B',this)"><div class="radio"></div><span>⚡ コンテストで受賞して「技術がすごい」と業界で有名な存在</span></button>
+<button class="opt" onclick="pick('q5','C',this)"><div class="radio"></div><span>📸 SNSフォロワーが多くてDMで指名が来るインフルエンサー美容師</span></button>
+<button class="opt" onclick="pick('q5','D',this)"><div class="radio"></div><span>💰 美容師でしっかり稼いで、好きなことにお金を使えてる</span></button>
+<button class="opt" onclick="pick('q5','E',this)"><div class="radio"></div><span>🔥 店長として後輩を育てて、サロンを引っ張っている</span></button>
+<button class="opt" onclick="pick('q5','F',this)"><div class="radio"></div><span>💆 ヘッドスパや癒し系メニューの指名が多い癒しの専門家</span></button>
+<button class="opt" onclick="pick('q5','G',this)"><div class="radio"></div><span>💫 撮影や雑誌に出たり、トレンドを発信する側にいる</span></button>
+<button class="opt" onclick="pick('q5','H',this)"><div class="radio"></div><span>💝 成人式・結婚式など大切な場面に呼ばれる信頼のおける美容師</span></button>
+</div></div><button class="btn-main" id="btn-q5" disabled onclick="go(6)">次へ →</button></div>
 <div class="scr" id="scr-q6"><div class="card"><div class="q-num-badge">Q6 / 06</div><div class="q-text">サロン見学はどちらが良いですか？</div><div class="opts" id="opts-q6"><button class="opt" onclick="pick('q6','real',this)"><div class="radio"></div><span>🏠 リアル — 実際にサロンに来てみたい！</span></button><button class="opt" onclick="pick('q6','online',this)"><div class="radio"></div><span>💻 オンライン — まずは気軽に話を聞きたい</span></button></div></div><button class="btn-main" id="btn-q6" disabled onclick="goMbti()">次へ →</button></div>
 
 <!-- MBTI -->
@@ -245,6 +288,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku
     </div>
     <div class="card"><div class="sec-ttl">💡 About You</div><p class="body-txt" id="res-desc"></p><div class="tags" id="res-tags"></div></div>
     <div class="mbti-card" id="mbti-block" style="display:none"><div class="mbti-badge-row"><span class="mbti-code" id="mbti-display"></span><span class="mbti-type-name" id="mbti-type-name"></span></div><div class="mbti-msg" id="mbti-msg"></div></div>
+    <!-- 占いカード -->
+    <div id="fortune-block" style="display:none"></div>
     <div class="card"><div class="sec-ttl">💌 PAULからのメッセージ</div><p class="body-txt" id="res-msg"></p></div>
     <div class="card">
       <div class="sec-ttl">🗺 あなただけのロードマップ</div>
@@ -259,6 +304,28 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku
         <button class="course-card on" id="cc-basic" onclick="selectCourse('basic',this)"><div class="course-card-icon">✂️</div><div><div class="course-card-name">ベーシックコース</div><div class="course-card-desc">カット・カラー・パーマなど幅広く習得</div><div class="course-card-badge" style="background:rgba(232,150,142,.14);color:var(--mauve);border:1px solid rgba(232,150,142,.28)">最短1年3ヶ月〜</div></div></button>
         <button class="course-card" id="cc-mens" onclick="selectCourse('mens',this)"><div class="course-card-icon">💈</div><div><div class="course-card-name">メンズコース</div><div class="course-card-desc">メンズヘアに特化！デビューが早い</div><div class="course-card-badge" style="background:rgba(125,212,184,.14);color:#408060;border:1px solid rgba(125,212,184,.3)">デビューが早い！</div></div></button>
         <button class="course-card" id="cc-eye" onclick="selectCourse('eye',this)"><div class="course-card-icon">👁</div><div><div class="course-card-name">アイリスト専任コース</div><div class="course-card-desc">アイデザインを極める専門コース</div><div class="course-card-badge" style="background:rgba(168,156,212,.14);color:#7060a0;border:1px solid rgba(168,156,212,.28)">12ヶ月で全メニュー</div></div></button>
+      </div>
+      <!-- デビューペース選択 -->
+      <div class="course-select-ttl" style="margin-top:4px">⏱ デビューペースを選んでね！</div>
+      <div style="display:flex;gap:8px;margin-bottom:18px">
+        <button class="pace-btn on" id="pace-fast" onclick="selectPace('fast',this)" style="flex:1;padding:12px 6px;border-radius:14px;border:2px solid #82b082;background:rgba(130,176,130,.12);cursor:pointer;text-align:center;transition:all .2s">
+          <div style="font-size:18px;margin-bottom:3px">🚀</div>
+          <div style="font-size:12px;font-weight:700;color:#508050">最速！</div>
+          <div style="font-size:10px;color:#508050">1年3ヶ月</div>
+          <div style="font-size:9px;color:#508050;margin-top:2px">先輩実績あり</div>
+        </button>
+        <button class="pace-btn" id="pace-normal" onclick="selectPace('normal',this)" style="flex:1;padding:12px 6px;border-radius:14px;border:2px solid rgba(232,150,142,.3);background:white;cursor:pointer;text-align:center;transition:all .2s">
+          <div style="font-size:18px;margin-bottom:3px">⭐</div>
+          <div style="font-size:12px;font-weight:700;color:var(--mauve)">標準ペース</div>
+          <div style="font-size:10px;color:var(--mauve)">1年6ヶ月</div>
+          <div style="font-size:9px;color:var(--mauve);margin-top:2px">平均デビュー</div>
+        </button>
+        <button class="pace-btn" id="pace-slow" onclick="selectPace('slow',this)" style="flex:1;padding:12px 6px;border-radius:14px;border:2px solid rgba(232,150,142,.3);background:white;cursor:pointer;text-align:center;transition:all .2s">
+          <div style="font-size:18px;margin-bottom:3px">🎓</div>
+          <div style="font-size:12px;font-weight:700;color:#7060a0">じっくり</div>
+          <div style="font-size:10px;color:#7060a0">2年〜</div>
+          <div style="font-size:9px;color:#7060a0;margin-top:2px">完璧に仕上げる</div>
+        </button>
       </div>
       <div id="timeline"></div>
     </div>
@@ -328,10 +395,14 @@ function makeQRSVG(url) {
       hints:['「一人暮らしでもこれだけサポートがある」を先に伝える','手当の一覧表を見せると具体性が出る','「先輩も一人暮らしで楽しんでる」実例を添える']},
   };
   const TYPE_INFO_S={
-    S:{emoji:'🌸',name:'みんなの推しスタイリスト',color:'#c06060',bg:'rgba(232,150,142,.15)'},
-    T:{emoji:'⚡',name:'バリバリ稼ぐ技術マニア',color:'#c08020',bg:'rgba(245,168,96,.15)'},
-    C:{emoji:'📸',name:'魅せる美容師になりたい',color:'#7050b0',bg:'rgba(168,156,212,.15)'},
-    L:{emoji:'🔥',name:'ガチで上り詰めたい野心家',color:'#408040',bg:'rgba(130,176,130,.15)'},
+    A:{emoji:'🌸',name:'指名が止まらないアイドル美容師',color:'#c06060',bg:'rgba(232,150,142,.15)'},
+    B:{emoji:'⚡',name:'技術オタクの職人美容師',color:'#c08020',bg:'rgba(245,168,96,.15)'},
+    C:{emoji:'📸',name:'SNSで有名になりたい美容師',color:'#7050b0',bg:'rgba(168,156,212,.15)'},
+    D:{emoji:'💰',name:'美容師で本気で稼ぎたい',color:'#b07800',bg:'rgba(245,200,80,.15)'},
+    E:{emoji:'🔥',name:'絶対に店長になる美容師',color:'#c04040',bg:'rgba(232,100,100,.15)'},
+    F:{emoji:'💆',name:'癒しのスペシャリスト美容師',color:'#6090a0',bg:'rgba(100,180,200,.15)'},
+    G:{emoji:'💫',name:'トレンドを作る側になりたい美容師',color:'#5050b0',bg:'rgba(100,100,200,.15)'},
+    H:{emoji:'💝',name:'お客様の人生に寄り添う美容師',color:'#b05080',bg:'rgba(200,100,140,.15)'},
   };
   const Q_LABELS_S={human:'👥 人間関係',edu:'📚 教育・成長',salary:'💰 給料・収入',welfare:'🌿 福利厚生',real:'🏠 リアル見学',online:'💻 オンライン'};
   const type=p.get('type')||'S',name=decodeURIComponent(p.get('name')||''),school=decodeURIComponent(p.get('school')||''),grade=decodeURIComponent(p.get('grade')||''),q3=p.get('q3')||'human',q4=p.get('q4')||'edu',q6=p.get('q6')||'',mbti=p.get('mbti')||'';
@@ -367,41 +438,50 @@ function makeQRSVG(url) {
   </div>`;
 })();
 
-const profile={name:'',school:'',grade:'',joinMonth:''};
+const profile={name:'',school:'',grade:'',joinMonth:'',birthday:'',blood:''};
 const ans={q1:null,q2:null,q3:null,q4:null,q5:null,q6:null};
 const mbtiAns={EI:null,SN:null,TF:null,JP:null};
-let currentType='S',currentCourse='basic';
+let currentType='A',currentCourse='basic',currentPace='fast';
 
+// 8タイプ定義
 const TYPES={
-  S:{emoji:'🌸',name:'みんなの推しスタイリスト',catch:'「あなたじゃなきゃダメ！」って言われたい',sub:'お客様との絆でリピーターを量産するタイプ',desc:'あなたは技術だけでなく、お客様との関係性を最も大切にするタイプ。「また会いたい」と思ってもらえる美容師を目指しています。',tags:['接客力','指名客獲得','リピーター育成','カウンセリング力'],msg:'PAULでは入社直後からカウンセリング研修に注力しています。お客様の声に耳を傾ける力を育てながら、早期に指名客を獲得できる環境を整えています。',color:'#c06060',heroGrad:'linear-gradient(135deg,#ffe0e0,#fff0e8,#ffe8f0)',goal:'お客様に愛され続ける、サロンの顔へ！'},
-  T:{emoji:'⚡',name:'バリバリ稼ぐ技術マニア',catch:'うまくなりたい欲が止まらないタイプ',sub:'技術を極めて、業界トップにのし上がる',desc:'技術にとことんこだわる職人気質。コンテストで結果を出したい、業界トップの技術者になりたいという強い向上心があります。',tags:['技術追求','コンテスト志向','スペシャリスト','職人気質'],msg:'PAULは技術教育に特に力を入れており、社内コンテストや外部技術セミナーへの参加を積極サポート！コンテストの費用は会社負担！「もっと上手くなりたい」気持ちを全力でバックアップします。',color:'#c08020',heroGrad:'linear-gradient(135deg,#fff5d0,#ffe8c0,#fff0d8)',goal:'業界に名を残す、テクニカルトップへ！'},
-  C:{emoji:'📸',name:'魅せる美容師になりたい',catch:'「かわいい」「かっこいい」を作り出したいタイプ',sub:'ビジュアルとセンスで人を惹きつける表現者',desc:'トレンドに敏感で、自分のセンスで人を魅了することに喜びを感じるタイプ。各サロンの撮影会やSNS発信を通じて唯一無二の存在を目指します。',tags:['ビジュアル表現','センス重視','SNS発信','クリエイティブ'],msg:'PAULでは各サロンごとの撮影会に1年目からアシスタントとして参加できます！SNS発信も積極推奨。あなたのビジュアルセンスを最大限活かせる環境です。',color:'#7050b0',heroGrad:'linear-gradient(135deg,#f0e8ff,#e8f0ff,#f8e8ff)',goal:'美容×表現で、業界のアイコンへ！'},
-  L:{emoji:'🔥',name:'ガチで上り詰めたい野心家',catch:'将来は絶対トップになる、って決めてるタイプ',sub:'社内独立・店長・マネジメント。ビジョンがでかい',desc:'チームワークと組織への貢献を大切にするリーダー気質。将来は店長・社内独立・マネージャーとして後輩を育て、サロン全体を引っ張る存在を目指しています。',tags:['リーダーシップ','組織貢献','社内独立志向','キャリアビジョン明確'],msg:'PAULでは若くしてリーダーポジションに就くチャンスが豊富！店長候補育成プログラムや社内独立支援制度も整えており、あなたのキャリアプランを一緒に描きます。',color:'#408040',heroGrad:'linear-gradient(135deg,#e0f5e0,#e8ffe8,#d8f0e8)',goal:'社内独立・店長・経営者。自分だけの舞台へ！'},
+  A:{emoji:'🌸',name:'指名が止まらないアイドル美容師',catch:'「あなたじゃなきゃ！」って言わせたい',sub:'お客様の推しになって指名を量産するタイプ',desc:'人に愛されることが原動力！お客様との関係を大切にして、「また来たい」と思ってもらえる美容師を目指しています。指名客を増やすことが最大のやりがいです。',tags:['指名客獲得','接客力','リピーター育成','人気者'],msg:'PAULでは入社直後からカウンセリング研修に注力！お客様の声に耳を傾ける力を育てながら、早期に指名客を獲得できる環境を整えています。あなたのファンをたくさん作ろう！',color:'#c06060',heroGrad:'linear-gradient(135deg,#ffe0e0,#fff0e8,#ffe8f0)',goal:'指名No.1！サロンのアイドルスタイリストへ！'},
+  B:{emoji:'⚡',name:'技術オタクの職人美容師',catch:'うまくなりたい欲が止まらないタイプ',sub:'技術を極めて業界トップを狙う職人肌',desc:'技術にとことんこだわる職人気質。難しいカラーやカットをマスターしたい、コンテストで結果を出したいという強い向上心があります。',tags:['技術追求','職人気質','コンテスト志向','スペシャリスト'],msg:'PAULは技術教育に特に力を入れており、社内コンテストや外部技術セミナーへの参加を積極サポート！コンテストの費用は会社負担！あなたの「もっと上手くなりたい」を全力応援します。',color:'#c08020',heroGrad:'linear-gradient(135deg,#fff5d0,#ffe8c0,#fff0d8)',goal:'業界に名を刻む！テクニカルトップへ！'},
+  C:{emoji:'📸',name:'SNSで有名になりたい美容師',catch:'フォロワー爆増させてSNSスターになる！',sub:'SNS発信でどんどん有名になるタイプ',desc:'トレンドに敏感で、自分のセンスをSNSで発信することが大好き。ビフォーアフター投稿でフォロワーを増やし、SNS経由で指名が来る美容師を目指しています。',tags:['SNS発信','フォロワー獲得','ビジュアル表現','インフルエンサー'],msg:'PAULではSNS発信を積極推奨！各サロンの撮影会に1年目からアシスタントとして参加できます。あなたのSNSセンスを最大限活かせる環境です！',color:'#7050b0',heroGrad:'linear-gradient(135deg,#f0e8ff,#e8f0ff,#f8e8ff)',goal:'フォロワー1万超え！SNS発美容師スターへ！'},
+  D:{emoji:'💰',name:'美容師で本気で稼ぎたい',catch:'稼げる美容師になって人生変えたい！',sub:'売上・歩合・指名料で本気で稼ぐタイプ',desc:'美容師でしっかり稼ぎたいという明確なビジョンがあります。歩合・指名料のしくみをしっかり理解して、早期にトップスタイリストの収入を目指しています。',tags:['高収入志向','売上意識','歩合・指名料','目標達成型'],msg:'PAULはスタイリストデビュー後の歩合制度が充実！頑張った分だけ収入に直結します。アシスタント中から売上意識を育てる研修も充実しているので、稼げる美容師への最短ルートを一緒に歩みましょう！',color:'#b07800',heroGrad:'linear-gradient(135deg,#fff8d0,#ffe8a0,#fff4c0)',goal:'トップスタイリストの収入を手に入れる！'},
+  E:{emoji:'🔥',name:'絶対に店長になる美容師',catch:'早く店長になってチームを引っ張りたい！',sub:'リーダーシップでサロンを動かすタイプ',desc:'チームをまとめて引っ張ることに喜びを感じるリーダー気質。将来は店長として後輩を育て、サロン全体を動かす存在になることを明確に目指しています。',tags:['リーダーシップ','店長志望','チームマネジメント','組織貢献'],msg:'PAULでは若くして店長・リーダーポジションに就くチャンスが豊富！店長候補育成プログラムも整えており、あなたのキャリアプランを一緒に描きます。早期店長も夢じゃない！',color:'#c04040',heroGrad:'linear-gradient(135deg,#ffe0d0,#fff0e8,#ffe8e0)',goal:'最速で店長へ！サロンを動かすリーダーへ！'},
+  F:{emoji:'💆',name:'癒しのスペシャリスト美容師',catch:'お客様に最高の癒しを届けたい',sub:'ヘッドスパ・トリートメントで癒しを極めるタイプ',desc:'お客様に「癒された」「また来たい」と思ってもらえる空間と施術を提供することが目標。ヘッドスパやトリートメントなど、癒し系メニューを極めたいと思っています。',tags:['癒し系','ヘッドスパ','トリートメント','リラクゼーション'],msg:'PAULにはヘッドスパのスペシャリスト育成制度があります！社内スパ大会でスキルを磨きながら、癒しの専門家として活躍できる環境を整えています。',color:'#6090a0',heroGrad:'linear-gradient(135deg,#d0f0f8,#e0f8f0,#d8f0f8)',goal:'癒しのプロとして、お客様の心を満たす存在へ！'},
+  G:{emoji:'💫',name:'トレンドを作る側になりたい美容師',catch:'流行を追うんじゃなく、作る側になりたい！',sub:'最先端トレンドを発信するクリエイター',desc:'トレンドをいち早くキャッチするだけでなく、自分がトレンドを作る側に立ちたいという強い野心があります。撮影・コレクション・メディアで活躍することを目指しています。',tags:['トレンド発信','クリエイティブ','撮影・コレクション','先端志向'],msg:'PAULでは各サロンの撮影会に1年目からアシスタントとして参加できます！トレンドの最前線で活躍するスタイリストへの道をPAULで歩もう！',color:'#5050b0',heroGrad:'linear-gradient(135deg,#e0e0ff,#e8f0ff,#d8e8ff)',goal:'トレンドの発信地！業界のクリエイターへ！'},
+  H:{emoji:'💝',name:'お客様の人生に寄り添う美容師',catch:'髪を通して、人生に関わる美容師になりたい',sub:'お客様の人生に深く関わる美容師タイプ',desc:'髪を切るだけでなく、お客様の人生の節目に関わりたいという深い思いがあります。成人式・結婚式・就活など、大切な瞬間に寄り添える美容師を目指しています。',tags:['人生に寄り添う','カウンセリング','信頼関係','長期リピーター'],msg:'PAULではカウンセリング力を育てる研修が充実！お客様の人生に長く関わる「かかりつけ美容師」になれる環境を整えています。あなたの思いやりの心が最大の武器になります。',color:'#b05080',heroGrad:'linear-gradient(135deg,#ffe0f0,#fff0f8,#ffe8f4)',goal:'お客様の人生に寄り添う、唯一無二の存在へ！'},
 };
 
 const TYPE_COURSE_MSG={
-  S:{basic:'指名客を増やすには、まずお客様に顔を覚えてもらうことが大事。ベーシックコースで幅広い技術を身につけながら、カウンセリング力を磨いていこう！',mens:'メンズのお客様はリピート率が高い！メンズコースでしっかり技術を固めることが、あなたの指名客をたくさん作ることにつながるよ。',eye:'まつ毛・眉は特にお客様との信頼関係が大事なメニュー。アイリストコースでじっくり技術を磨きながら、あなたの指名客を育てよう！'},
-  T:{basic:'ベーシックコースはカット・カラー・パーマとコンテストで戦える技術の土台が全部ある！グランプリ受賞実績もあるし、技術マニアのあなたにピッタリ。',mens:'メンズのパーマ・矯正は難易度が高い分、習得できたときの達成感がすごい。技術を極めたいあなたにはたまらないコースだよ！',eye:'アイリストは細かい技術の積み重ね。「完璧に仕上げたい」という気質のあなたに向いてる。NBL/HBLなど高難易度技術も習得できるよ！'},
-  C:{basic:'各サロンの撮影会はベーシックコースの1年目からアシスタントとして参加できる！カット・カラーの技術が上がるほど、あなたの表現の幅も広がるよ。',mens:'メンズスタイルはSNSで映えるコンテンツになりやすい！ツイストスパイラルやセンターパートなど、インパクトのあるスタイルが習得できるコース。',eye:'まつ毛・眉のビフォーアフターはSNSで一番バズりやすいコンテンツ！アイリストコースはあなたのSNS力を最大限活かせる選択肢だよ。'},
-  L:{basic:'ベーシックコースは一番人数が多いから、チームをまとめるリーダーシップを磨く機会も豊富。将来店長を目指すなら土台になるコースだよ！',mens:'メンズコースはデビューが早い分、早期にスタイリストとして売上管理や後輩指導を経験できる。リーダーへの道が早く開けるコースだよ。',eye:'アイサロンのリーダーとして、将来は自分のアイサロンを持つ道も。PAULのアイサロンで経営の仕組みを学びながらキャリアを積もう！'},
+  A:{basic:'指名客を増やすには、まずお客様に顔を覚えてもらうことが大事。ベーシックコースで幅広い技術を身につけながら、カウンセリング力を磨いていこう！',mens:'メンズのお客様はリピート率が高い！メンズコースでしっかり技術を固めることが、あなたの指名客をたくさん作ることにつながるよ。',eye:'まつ毛・眉は特にお客様との信頼関係が大事なメニュー。アイリストコースでじっくり技術を磨きながら、あなたの指名客を育てよう！'},
+  B:{basic:'ベーシックコースはカット・カラー・パーマとコンテストで戦える技術の土台が全部ある！技術オタクのあなたにピッタリ。グランプリを狙おう！',mens:'メンズのパーマ・矯正は難易度が高い分、習得できたときの達成感がすごい。技術を極めたいあなたにはたまらないコースだよ！',eye:'アイリストは細かい技術の積み重ね。「完璧に仕上げたい」という気質のあなたに向いてる。NBL/HBLなど高難易度技術も習得できるよ！'},
+  C:{basic:'各サロンの撮影会はベーシックコースの1年目からアシスタントとして参加できる！カット・カラーの技術が上がるほど、SNS映えするスタイルが作れるよ。',mens:'メンズスタイルはSNSで映えるコンテンツになりやすい！ツイストスパイラルやセンターパートなど、インパクトのあるスタイルが習得できるコース。',eye:'まつ毛・眉のビフォーアフターはSNSで一番バズりやすいコンテンツ！アイリストコースはあなたのSNS力を最大限活かせる選択肢だよ。'},
+  D:{basic:'ベーシックコースはスタイリストデビュー後の歩合収入が一番高くなりやすい！幅広い技術で指名を増やして、しっかり稼ごう！',mens:'メンズはリピート率が高くて安定収入が見込みやすい！早期デビューで早く稼げるようになれるメンズコースはあなたにピッタリ。',eye:'アイリストはメニュー単価が高め！コツコツ技術を積み上げて、高単価メニューで稼げるスタイリストを目指そう。'},
+  E:{basic:'ベーシックコースは一番人数が多いから、チームをまとめるリーダーシップを磨く機会も豊富。将来店長を目指すなら土台になるコースだよ！',mens:'メンズコースはデビューが早い分、早期にスタイリストとして売上管理や後輩指導を経験できる。リーダーへの道が早く開けるコースだよ。',eye:'アイサロンのリーダーとして、将来は自分のアイサロンを持つ道も。PAULのアイサロンで経営の仕組みを学びながらキャリアを積もう！'},
+  F:{basic:'ベーシックコースにはヘッドスパの技術も含まれてる！シャンプー大会・スパ大会でスキルを磨いて、癒しのスペシャリストへの道を歩もう。',mens:'メンズのヘッドスパはニーズが高まってる！メンズコースでヘッドスパも習得して、男性客から支持される癒し系スタイリストを目指そう。',eye:'アイリストは癒し系メニューの代表格！まつ毛パーマやトリートメントで、お客様をリラックスさせながら美しくする専門家を目指そう。'},
+  G:{basic:'ベーシックコースは最もトレンドの幅が広い！カット・カラー・パーマを極めながら、撮影会で最先端のスタイルを発信しよう。',mens:'メンズのトレンドは変化が速い！ツイストスパイラルやセンターパートなど、最新メンズトレンドをいち早く習得して発信者になろう。',eye:'まつ毛・眉のトレンドは今一番熱い！アイリストコースでトレンドの最前線に立って、業界をリードするスタイリストになろう。'},
+  H:{basic:'ベーシックコースはカウンセリング力が一番鍛えられるコース。お客様の人生に長く関わる美容師になるには最高の土台だよ！',mens:'メンズのお客様はリピート率が高くて長期的な関係を築きやすい。人生に寄り添う美容師を目指すあなたにピッタリのコースだよ。',eye:'まつ毛・眉は特にお客様との信頼関係が大切。アイリストコースで一人一人のお客様と深い関係を築いていこう！'},
 };
 
 const COURSES={
-  basic:{label:'ベーシックコース',typeGoals:{S:'指名客No.1スタイリストへ！',T:'技術コンテストグランプリへ！',C:'撮影・SNSで魅せるスタイリストへ！',L:'最速でチーフ・店長へ！'},phases:[
+  basic:{label:'ベーシックコース',typeGoals:{A:'指名客No.1スタイリストへ！',B:'技術コンテストグランプリへ！',C:'SNS発信で有名スタイリストへ！',D:'トップ収入のスタイリストへ！',E:'最速で店長へ！',F:'癒しのスペシャリストへ！',G:'トレンド発信のクリエイターへ！',H:'お客様の人生に寄り添う存在へ！'},phases:[
     {period:'入社〜6ヶ月',title:'10週間体験＋ウィッグ練習期',color:'#e8968e',lc:'rgba(232,150,142,.3)',skills:['リメイク','縦塗り','ウィービング','ワンレングロー','ハイライト','グラデーション','ゼロテク','アイロン'],items:['10週間の体験期間でサロンワークの流れを体感','ウィッグを使って基礎技術を徹底練習','シャンプー大会・スパ大会に参加']},
     {period:'6ヶ月〜1年',title:'相モデル期',color:'#f5a860',lc:'rgba(245,168,96,.3)',skills:['サイドシャンプー','カラーシャンプー','1塗りモデル','入本モデル','カラーモデル','社会人接客マナー'],items:['実際のお客様（相モデル）で施術開始！','カラー理論・ブリーチ理論（初級）を学ぶ','minima作成に挑戦']},
     {period:'1年〜1年半（平均デビュー）',title:'昇格試験 → スタイリストデビュー！',color:'#f5c842',lc:'rgba(245,200,66,.3)',skills:['カットモデル（オールジャンル）','ブリーチモデル','フリースタイル1・2','スパイラルパーマ','ピンパーマ','昇格試験'],items:['最短1年3ヶ月！昇格試験合格でスタイリストへ','各サロンの撮影会にアシスタントとして参加可能','コンテスト参加（費用は会社負担！）']},
     {period:'デビュー後〜3年',title:'トップスタイリストへ',color:'#82b082',lc:'rgba(130,176,130,.3)',skills:['指名獲得','SNS発信','コンテスト挑戦'],items:['指名客を増やしながら売上を積み上げる','社内コンテスト・グランプリを目指す','各サロンの撮影会にスタイリストとして参加']},
     {period:'3年〜',title:'チーフ・社内独立・次のステージへ',color:'#a89cd4',lc:'rgba(168,156,212,.3)',skills:['チームマネジメント','後輩育成','社内独立・開業'],items:['後輩の教育担当として活躍','社内独立・マルチ展開など自分の未来を描く']},
   ]},
-  mens:{label:'メンズコース',typeGoals:{S:'メンズ指名No.1スタイリストへ！',T:'メンズ技術のスペシャリストへ！',C:'メンズスタイルでSNSを席巻！',L:'メンズサロンのリーダーへ！'},phases:[
+  mens:{label:'メンズコース',typeGoals:{A:'メンズ指名No.1スタイリストへ！',B:'メンズ技術のスペシャリストへ！',C:'メンズSNSで有名スタイリストへ！',D:'メンズで稼ぐトップスタイリストへ！',E:'メンズサロンのリーダーへ！',F:'メンズ癒しのスペシャリストへ！',G:'メンズトレンド発信者へ！',H:'メンズのかかりつけ美容師へ！'},phases:[
     {period:'入社〜6ヶ月',title:'ウィッグ練習期',color:'#7dd4b8',lc:'rgba(125,212,184,.3)',skills:['フィニッシングスタイル','リメイク','縦塗り','ツイストスパイラル','ウィービング','矯正スパイラル','矯正アイロン'],items:['メンズスタイルに特化した基礎技術を習得','ヘッドスパ・バックシャンプー・カラーシャンプーデビュー','シャンプー大会・社内コンテストに参加']},
     {period:'6ヶ月〜1年',title:'相モデル期',color:'#82b082',lc:'rgba(130,176,130,.3)',skills:['ワンレングス','センターパート','2ブロック','アップバング','刈り上げベリショ','メンズコピーカット','カラー理論','カット理論'],items:['実際のメンズモデル（相モデル）で施術開始！','ブリーチカラー（初級・応用）を習得','minima作成に挑戦']},
     {period:'1年〜1年半（デビュー）',title:'昇格試験 → スタイリストデビュー！',color:'#f5c842',lc:'rgba(245,200,66,.3)',skills:['カットモデル（オールジャンル）','ブリーチパーマモデル','フリーチカラー（初級・応用）','昇格試験'],items:['メンズ特化の技術で最短デビューを狙う！','昇格試験合格でスタイリストへ','各サロンの撮影会にアシスタントとして参加']},
     {period:'デビュー後〜3年',title:'メンズ専門スタイリストへ',color:'#e8968e',lc:'rgba(232,150,142,.3)',skills:['メンズ指名獲得','SNS発信','コンテスト挑戦'],items:['メンズ特化の指名客を獲得','SNSでメンズスタイルを発信して集客','コンテストで技術力を証明']},
     {period:'3年〜',title:'チーフ・社内独立・次のステージへ',color:'#a89cd4',lc:'rgba(168,156,212,.3)',skills:['チームマネジメント','後輩育成','社内独立・開業'],items:['社内独立でメンズ専門店を持つ道も','後輩へのメンズ技術指導を担当']},
   ]},
-  eye:{label:'アイリスト専任コース',typeGoals:{S:'アイリスト指名No.1へ！',T:'アイデザインの技術を極める！',C:'まつ毛×眉でビジュアルを作る！',L:'アイサロンのリーダー・社内独立へ！'},phases:[
+  eye:{label:'アイリスト専任コース',typeGoals:{A:'アイリスト指名No.1へ！',B:'アイデザインの技術を極める！',C:'まつ毛SNSで有名アイリストへ！',D:'高単価アイリストで稼ぐ！',E:'アイサロンのリーダー・社内独立へ！',F:'癒しのアイリストスペシャリストへ！',G:'まつ毛トレンド発信者へ！',H:'お客様に寄り添うアイリストへ！'},phases:[
     {period:'入社〜3ヶ月',title:'まつ毛パーマ・エクステ基礎期',color:'#a89cd4',lc:'rgba(168,156,212,.3)',skills:['エクステ基礎','まつ毛パーマ','下まつ毛パーマ','アイブロウWAX'],items:['エクステの基礎技術を最初に習得','まつ毛パーマの基礎を約1ヶ月で習得','PAULアイサロンの施術の流れを覚える']},
     {period:'3〜8ヶ月',title:'NBL・HBL・応用期',color:'#7dd4b8',lc:'rgba(125,212,184,.3)',skills:['NBLエクステ','HBLエクステ','下まつ毛エクステ','バリエク'],items:['ナチュラル〜ボリュームまで幅広いエクステを習得','NBL・HBLなど高難度技術をマスター','お客様のまつ毛診断ができるようになる']},
     {period:'8〜12ヶ月（フルデビュー）',title:'全メニューデビュー！',color:'#f5c842',lc:'rgba(245,200,66,.3)',skills:['全メニュー施術','モデルレッスン（10:00〜19:00）','業務委託モデルレッスン（無料）'],items:['12月には全メニューデビューを目指す！','モデルレッスンで技術を磨く（無料）','HAIRCAMPオンライン学習で技術をさらに強化']},
@@ -411,18 +491,86 @@ const COURSES={
 };
 
 const CAREER_STEPS={
-  S:[{label:'スタイリストデビュー🎉',months:0,icon:'🌸',color:'#d4a5a0',desc:'まずは月10名の指名を目標に！カウンセリング力でリピーターを育てる。'},{label:'トップスタイリスト',months:18,icon:'⭐',color:'#c49090',desc:'指名売上がサロントップクラスへ。「あなたじゃなきゃ！」と言われる存在に。'},{label:'チーフスタイリスト',months:36,icon:'👑',color:'#b08080',desc:'後輩のカウンセリング指導も担当。サロンの信頼の柱として活躍。'},{label:'社内独立・次のステージへ',months:60,icon:'🚀',color:'#906060',desc:'PAULグループ内で社内独立、またはプロデュース業へ。'}],
-  T:[{label:'スタイリストデビュー🎉',months:0,icon:'⚡',color:'#c49070',desc:'得意技術を前面に！まずは社内コンテストにエントリーしよう。費用は会社負担！'},{label:'テクニカルリーダー',months:18,icon:'🏆',color:'#b08060',desc:'社外コンテスト入賞も狙う。業界での認知度が上がる。'},{label:'チーフ・技術講師',months:36,icon:'📚',color:'#a07050',desc:'PAULの技術レベルを引き上げる存在に。HAIRCAMPオンライン講座への出演も。'},{label:'業界トップへ',months:60,icon:'🔥',color:'#906040',desc:'社内独立・技術講師・ブランドアンバサダーとして業界に名を刻む。'}],
-  C:[{label:'スタイリストデビュー🎉',months:0,icon:'📸',color:'#a090c0',desc:'SNS発信を本格化！ビフォーアフター投稿でフォロワーを増やし指名につなげる。'},{label:'インフルエンサースタイリスト',months:18,icon:'✨',color:'#9080b0',desc:'フォロワー1万超えを目指す。SNS経由の指名が増えてPAULの顔になっていく。'},{label:'サロンのブランドアイコン',months:36,icon:'💫',color:'#806aa0',desc:'撮影・コラボ・メディア出演。自分のビジュアルでPAULブランドを引き上げる存在に。'},{label:'クリエイターとして社内独立',months:60,icon:'🌟',color:'#705890',desc:'社内独立サロン・プロデュース業・唯一無二の世界観を持つ存在へ。'}],
-  L:[{label:'スタイリストデビュー🎉',months:0,icon:'🔥',color:'#7aa07a',desc:'売上の数字を意識しながら動く。デビュー直後から後輩指導にも積極的に関わる。'},{label:'チーフリーダー',months:18,icon:'👥',color:'#6a9070',desc:'チームのまとめ役に昇格。採用・教育・シフト管理も経験してマネジメント力を磨く。'},{label:'店長',months:36,icon:'🏪',color:'#5a8060',desc:'店舗の売上管理・スタッフ育成を担う。PAULを動かす中心的な存在へ。'},{label:'社内独立・経営者',months:60,icon:'🏆',color:'#3a6040',desc:'PAULグループ内で社内独立！PAULで培ったマネジメント力・人脈・技術を全て活かす。'}],
+  A:[
+    {label:'スタイリストデビュー🎉',months:0,icon:'🌸',color:'#d4a5a0',desc:'まずは月10名の指名を目標に！カウンセリング力でリピーターを育てる。'},
+    {label:'トップスタイリスト',months:18,icon:'⭐',color:'#c49090',desc:'指名売上がサロントップクラスへ。「あなたじゃなきゃ！」と言われる存在に。'},
+    {label:'チーフスタイリスト',months:36,icon:'👑',color:'#b08080',desc:'後輩のカウンセリング指導も担当。サロンのアイドル的存在として活躍。'},
+    {label:'あなたの未来はいろいろ！',months:60,icon:'🌈',color:'#906060',desc:'💼 バリバリ稼ぐトップスタイリストとして走り続ける\n👨‍👩‍👧 ライフスタイルに合わせたママさん美容師として活躍\n🏪 憧れの店長・マネージャーへ\n✨ 社内独立で自分のサロンをオープン\nPAULでは自分のライフスタイルに合わせた道を選べます！'},
+  ],
+  B:[
+    {label:'スタイリストデビュー🎉',months:0,icon:'⚡',color:'#c49070',desc:'得意技術を前面に！まずは社内コンテストにエントリーしよう。費用は会社負担！'},
+    {label:'テクニカルリーダー',months:18,icon:'🏆',color:'#b08060',desc:'社外コンテスト入賞も狙う。業界での認知度が上がる。'},
+    {label:'チーフ・技術講師',months:36,icon:'📚',color:'#a07050',desc:'PAULの技術レベルを引き上げる存在に。HAIRCAMPオンライン講座への出演も。'},
+    {label:'あなたの未来はいろいろ！',months:60,icon:'🌈',color:'#906040',desc:'🏆 技術講師・コンテスト審査員として業界に名を刻む\n🏪 技術力を武器に店長・マネージャーへ\n✨ 技術特化の社内独立サロンをオープン\n👨‍👩‍👧 ママさん・パパさん美容師として技術を活かし続ける\nどんな道でも「技術力」が最大の武器になります！'},
+  ],
+  C:[
+    {label:'スタイリストデビュー🎉',months:0,icon:'📸',color:'#a090c0',desc:'SNS発信を本格化！ビフォーアフター投稿でフォロワーを増やし指名につなげる。'},
+    {label:'インフルエンサースタイリスト',months:18,icon:'✨',color:'#9080b0',desc:'フォロワー1万超えを目指す。SNS経由の指名が増えてPAULの顔になっていく。'},
+    {label:'サロンのブランドアイコン',months:36,icon:'💫',color:'#806aa0',desc:'撮影・コラボ・メディア出演。自分のビジュアルでPAULブランドを引き上げる存在に。'},
+    {label:'あなたの未来はいろいろ！',months:60,icon:'🌈',color:'#705890',desc:'📱 SNS×美容師のプロとして発信業・プロデュース業へ\n🏪 ブランド力を活かして店長・マネージャーへ\n✨ 社内独立でSNS集客サロンをオープン\n👨‍👩‍👧 ライフスタイルに合わせてフリーランスやパート美容師へ\nあなたのセンスと発信力は一生の財産です！'},
+  ],
+  D:[
+    {label:'スタイリストデビュー🎉',months:0,icon:'💰',color:'#b09030',desc:'売上の数字を意識！指名を増やして歩合収入を最大化しよう。'},
+    {label:'トップ売上スタイリスト',months:18,icon:'📈',color:'#a08020',desc:'サロン内売上トップクラスへ。歩合・指名料でしっかり稼ぐ存在に。'},
+    {label:'高収入スペシャリスト',months:36,icon:'💎',color:'#907010',desc:'美容師でしっかり稼ぐ夢を実現。後輩への売上アドバイスも担当。'},
+    {label:'あなたの未来はいろいろ！',months:60,icon:'🌈',color:'#806000',desc:'💰 バリバリ稼ぐトップスタイリストとして走り続ける\n🏪 収益管理のプロとして店長・マネージャーへ\n✨ 社内独立で高収益サロンをオープン\n👨‍👩‍👧 稼ぎながらライフスタイルも充実するママさん美容師へ\n美容師でしっかり稼いで豊かな人生を！'},
+  ],
+  E:[
+    {label:'スタイリストデビュー🎉',months:0,icon:'🔥',color:'#c04040',desc:'売上の数字を意識しながら動く。デビュー直後から後輩指導にも積極的に関わる。'},
+    {label:'チーフリーダー',months:18,icon:'👥',color:'#b03030',desc:'チームのまとめ役に昇格。採用・教育・シフト管理も経験してマネジメント力を磨く。'},
+    {label:'店長・マネージャー',months:36,icon:'🏪',color:'#a02020',desc:'店舗の売上管理・スタッフ育成を担う。PAULを動かす中心的な存在へ。'},
+    {label:'あなたの未来はいろいろ！',months:60,icon:'🌈',color:'#801010',desc:'🏪 エリアマネージャーとして複数店舗を統括\n✨ 社内独立で自分のサロンを経営者として運営\n🎓 美容業界のコンサルタント・講師として活躍\n👨‍👩‍👧 ライフスタイルが変わっても管理職経験は一生の強みに\nあなたのリーダーシップはどんな道でも活きる！'},
+  ],
+  F:[
+    {label:'スタイリストデビュー🎉',months:0,icon:'💆',color:'#6090a0',desc:'癒し系メニューを前面に！ヘッドスパの指名を増やしていこう。'},
+    {label:'癒しのスペシャリスト',months:18,icon:'🌿',color:'#508090',desc:'ヘッドスパ・トリートメントの指名No.1へ。癒しの専門家として認知される。'},
+    {label:'スパリーダー',months:36,icon:'🧘',color:'#407080',desc:'後輩へのヘッドスパ技術指導も担当。PAULの癒し系メニューを引っ張る存在に。'},
+    {label:'あなたの未来はいろいろ！',months:60,icon:'🌈',color:'#306070',desc:'💆 癒しのプロとして高単価スペシャリストとして活躍\n🏪 店長として癒し特化のサロン運営を担う\n✨ 社内独立でヘッドスパ特化サロンをオープン\n👨‍👩‍👧 ライフスタイルに合わせたママさん美容師として長く活躍\n「癒し」の力は一生使えるあなたの武器です！'},
+  ],
+  G:[
+    {label:'スタイリストデビュー🎉',months:0,icon:'💫',color:'#5050b0',desc:'撮影会・SNS発信を本格化！トレンドの最前線に立とう。'},
+    {label:'トレンドリーダー',months:18,icon:'🌟',color:'#4040a0',desc:'業界トレンドを発信する存在に。撮影・コレクションにも積極参加。'},
+    {label:'クリエイティブディレクター',months:36,icon:'🎨',color:'#303090',desc:'PAULのビジュアル・ブランドを牽引。次世代スタイリストの育成も担当。'},
+    {label:'あなたの未来はいろいろ！',months:60,icon:'🌈',color:'#202080',desc:'🎨 クリエイター・フォトグラファーとしてコラボ・メディア活動\n🏪 ブランド力を活かして店長・クリエイティブマネージャーへ\n✨ 社内独立でトレンド発信サロンをオープン\n👨‍👩‍👧 フリーランス美容師としてライフスタイルに合わせて活躍\nトレンドを作る力は美容業界で最強の武器！'},
+  ],
+  H:[
+    {label:'スタイリストデビュー🎉',months:0,icon:'💝',color:'#b05080',desc:'お客様一人一人に丁寧に向き合う。長期的な信頼関係を築いていこう。'},
+    {label:'かかりつけ美容師',months:18,icon:'🤝',color:'#a04070',desc:'長く通い続けてくれるお客様が増える。人生の節目に呼ばれる美容師へ。'},
+    {label:'カウンセリングのプロ',months:36,icon:'💖',color:'#903060',desc:'後輩へのカウンセリング指導も担当。PAULの「寄り添う文化」を牽引する存在に。'},
+    {label:'あなたの未来はいろいろ！',months:60,icon:'🌈',color:'#802050',desc:'💝 長期常連客に囲まれたトップスタイリストとして活躍\n🏪 お客様目線を活かして店長・マネージャーへ\n✨ 社内独立で「かかりつけサロン」をオープン\n👨‍👩‍👧 育児をしながらも常連客に支えられるママさん美容師へ\nお客様との絆は一生続く、あなたの最大の財産！'},
+  ],
 };
 
 const MBTI_NAMES={INTJ:'建築家',INTP:'論理学者',ENTJ:'指揮官',ENTP:'討論者',INFJ:'提唱者',INFP:'仲介者',ENFJ:'主人公',ENFP:'広報運動家',ISTJ:'管理者',ISFJ:'擁護者',ESTJ:'幹部',ESFJ:'領事',ISTP:'巨匠',ISFP:'冒険家',ESTP:'起業家',ESFP:'エンターテイナー'};
-const MBTI_MSGS={S:{EI:{E:'外向的なあなたは初対面でもすぐ打ち解けられる強みがあります！その自然なコミュニケーション力が指名客獲得の大きな武器になります。',I:'内向的なあなたは、じっくりお客様の話を聞く「傾聴力」が抜群。深い関係を築けるので長く通い続けてもらえる美容師になれます。'},TF:{T:'論理的なあなたは、お客様の悩みを整理して的確な提案が得意。根拠を持ったアドバイスが信頼につながります。',F:'共感力の高いあなたは、お客様の気持ちに寄り添う接客が得意。「この人にしかわからない」と感じてもらえる美容師になれます！'}},T:{EI:{E:'外向的なあなたは、セミナーや勉強会で積極的に情報収集。業界のトレンドを誰より早くキャッチして技術に活かせます！',I:'内向的なあなたは一人での集中練習が得意。深い理解と反復で揺るぎない技術力を身につけます。'},TF:{T:'論理的思考のあなたは、技術の「なぜ」を徹底追求。理論と実践の両面から技術を磨けます！',F:'感性豊かなあなたは、お客様の「なりたい」を技術で体現するのが得意。唯一無二の仕上がりを生み出します。'}},C:{EI:{E:'外向的なあなたは発信力と行動力が武器。ライブ配信やイベント参加でどんどん顔と名前を広めていけます！',I:'内向的でも、こだわり抜いたコンテンツは強い。丁寧に作り込んだ投稿が「センスのある美容師」として刺さります。'},TF:{T:'分析的なあなたはデータを見ながら戦略的にSNSを運用できます。バズる投稿を設計する力があります！',F:'感性重視のあなたは、感動を伝えるコンテンツ作りが得意。ストーリー性のある発信でフォロワーの心を動かします。'}},L:{EI:{E:'外向的なあなたは、チームを鼓舞するムードメーカー。明るいリーダーシップでサロン全体の雰囲気を引き上げます！',I:'内向的なあなたは、じっくり考えて行動する「思慮深いリーダー」。後輩からも「信頼できる先輩」と慕われます。'},TF:{T:'論理的なあなたは数字とデータでサロンの課題を見える化。合理的な判断で組織を動かす力があります！',F:'人の気持ちに敏感なあなたは、スタッフの悩みをいち早くキャッチ。チームの雰囲気を守るリーダーになれます。'}}};
+const MBTI_MSGS={
+  A:{EI:{E:'外向的なあなたは初対面でもすぐ打ち解けられる強みがあります！その自然なコミュニケーション力が指名客獲得の大きな武器になります。',I:'内向的なあなたは、じっくりお客様の話を聞く「傾聴力」が抜群。深い関係を築けるので長く通い続けてもらえる美容師になれます。'},TF:{T:'論理的なあなたは、お客様の悩みを整理して的確な提案が得意。根拠を持ったアドバイスが信頼につながります。',F:'共感力の高いあなたは、お客様の気持ちに寄り添う接客が得意。「この人にしかわからない」と感じてもらえる美容師になれます！'}},
+  B:{EI:{E:'外向的なあなたは、セミナーや勉強会で積極的に情報収集。業界のトレンドを誰より早くキャッチして技術に活かせます！',I:'内向的なあなたは一人での集中練習が得意。深い理解と反復で揺るぎない技術力を身につけます。'},TF:{T:'論理的思考のあなたは、技術の「なぜ」を徹底追求。理論と実践の両面から技術を磨けます！',F:'感性豊かなあなたは、お客様の「なりたい」を技術で体現するのが得意。唯一無二の仕上がりを生み出します。'}},
+  C:{EI:{E:'外向的なあなたは発信力と行動力が武器。ライブ配信やイベント参加でどんどん顔と名前を広めていけます！',I:'内向的でも、こだわり抜いたコンテンツは強い。丁寧に作り込んだ投稿が「センスのある美容師」として刺さります。'},TF:{T:'分析的なあなたはデータを見ながら戦略的にSNSを運用できます。バズる投稿を設計する力があります！',F:'感性重視のあなたは、感動を伝えるコンテンツ作りが得意。ストーリー性のある発信でフォロワーの心を動かします。'}},
+  D:{EI:{E:'外向的なあなたは、お客様との会話から自然に追加メニューを提案できる強みがあります。売上アップに直結するコミュニケーション力！',I:'内向的なあなたは、技術をとことん磨いて「この人にしか頼めない」という強みで高単価・指名を積み上げられます。'},TF:{T:'数字に強いあなたは売上・歩合の仕組みをすぐ理解して最大化できます。戦略的に稼げる美容師になれます！',F:'お客様の気持ちを大切にするあなたは、自然な形で高単価メニューを提案できます。感動させて稼ぐスタイル！'}},
+  E:{EI:{E:'外向的なあなたは、チームを鼓舞するムードメーカー。明るいリーダーシップでサロン全体の雰囲気を引き上げます！',I:'内向的なあなたは、じっくり考えて行動する「思慮深いリーダー」。後輩からも「信頼できる先輩」と慕われます。'},TF:{T:'論理的なあなたは数字とデータでサロンの課題を見える化。合理的な判断で組織を動かす力があります！',F:'人の気持ちに敏感なあなたは、スタッフの悩みをいち早くキャッチ。チームの雰囲気を守るリーダーになれます。'}},
+  F:{EI:{E:'外向的なあなたは、お客様との会話でリラックスさせながら施術できる強みがあります。癒しの空間を自然に作り出せます！',I:'内向的なあなたは、静かで落ち着いた雰囲気が癒しの空間にぴったり。お客様が「ここにいるだけで癒される」と感じてもらえます。'},TF:{T:'丁寧で正確なあなたは、トリートメントやヘッドスパの技術を確実にマスターできます。信頼される技術で癒しを届けましょう！',F:'感受性の高いあなたは、お客様の疲れや悩みを敏感に感じ取れます。心に寄り添う癒しが一番の強みになります！'}},
+  G:{EI:{E:'外向的なあなたは、SNS発信やイベント参加でどんどんトレンドを発信できます。業界の顔になる素質があります！',I:'内向的なあなたは、こだわり抜いたクリエイティブ作品で勝負できます。深いこだわりが唯一無二のスタイルを生み出します。'},TF:{T:'分析的なあなたは、トレンドの変化を読み解く力があります。データとセンスを組み合わせてトレンドを先読みできます！',F:'感性豊かなあなたは、感覚でトレンドを掴む天才型。自分のセンスを信じてどんどん発信していきましょう！'}},
+  H:{EI:{E:'外向的なあなたは、初対面のお客様とも自然に深い話ができる強みがあります。人生に関わる美容師への近道です！',I:'内向的なあなたは、じっくりお客様の話を聞く「傾聴力」が最大の武器。お客様が「この人に話したい」と感じる美容師になれます。'},TF:{T:'論理的なあなたは、お客様の悩みを整理して最適な提案ができます。信頼される「美容師アドバイザー」になれます！',F:'共感力の高いあなたは、お客様の気持ちに深く寄り添えます。「この人だから話せる」という絆を築ける美容師になれます。'}},
+};
 
 function showScr(id){document.querySelectorAll('.scr').forEach(s=>s.classList.remove('on'));document.getElementById('scr-'+id).classList.add('on');window.scrollTo(0,0)}
 function checkProfile(){document.getElementById('btn-profile').disabled=!(document.getElementById('inp-name').value.trim()&&document.getElementById('inp-school').value.trim()&&profile.grade)}
 function pickGrade(g,el){profile.grade=g;document.querySelectorAll('#grade-row-grade .grade-btn').forEach(b=>b.classList.remove('on'));el.classList.add('on');checkProfile()}
+
+// 血液型ボタン — onclick属性を使わずイベントリスナーで設定
+(function(){
+  var btns=document.querySelectorAll('#grade-row-blood .grade-btn');
+  for(var i=0;i<btns.length;i++){
+    btns[i].addEventListener('click',(function(btn){
+      return function(){
+        profile.blood=btn.dataset.blood;
+        var all=document.querySelectorAll('#grade-row-blood .grade-btn');
+        for(var j=0;j<all.length;j++)all[j].classList.remove('on');
+        btn.classList.add('on');
+      };
+    })(btns[i]));
+  }
+})();
 function pickJoinMonth(m,el){profile.joinMonth=m;document.querySelectorAll('#grade-row-join .grade-btn').forEach(b=>b.classList.remove('on'));el.classList.add('on')}
 function startDiag(){profile.name=document.getElementById('inp-name').value.trim();profile.school=document.getElementById('inp-school').value.trim();document.getElementById('hdr').style.display='none';document.getElementById('prog').style.display='block';setProgress(1);showScr('q1')}
 function setProgress(q){const pct=Math.round(q/6*100);document.getElementById('prog-lbl').textContent=`Q${q} / 6`;document.getElementById('prog-pct').textContent=pct+'%';document.getElementById('prog-fill').style.width=pct+'%'}
@@ -438,6 +586,19 @@ function parseJoinMonth(str){if(!str||str==='未定')return null;const m=str.mat
 
 function selectCourse(key,el){currentCourse=key;document.querySelectorAll('.course-card').forEach(c=>c.classList.remove('on'));el.classList.add('on');renderTimeline()}
 
+function selectPace(pace,el){
+  currentPace=pace;
+  document.querySelectorAll('.pace-btn').forEach(b=>{
+    b.style.background='white';
+    b.style.borderColor='rgba(232,150,142,.3)';
+  });
+  const colors={fast:'rgba(130,176,130,.12)',normal:'rgba(232,150,142,.12)',slow:'rgba(168,156,212,.12)'};
+  const borders={fast:'#82b082',normal:'var(--rose)',slow:'#a89cd4'};
+  el.style.background=colors[pace];
+  el.style.borderColor=borders[pace];
+  renderTimeline();
+}
+
 function renderTimeline(){
   const c=COURSES[currentCourse],t=TYPES[currentType];
   const goal=c.typeGoals?.[currentType]||t.goal;
@@ -452,20 +613,136 @@ function renderTimeline(){
     const cal=joinInfo?`<div style="font-size:10px;font-weight:700;color:white;background:${p.color};padding:2px 8px;border-radius:20px">${addMonths(joinInfo.year,joinInfo.month,off)} 〜</div>`:'';
     return`<div class="tl-phase"><div class="tl-left"><div class="tl-dot" style="background:${p.color}">${i+1}</div>${i<c.phases.length-1?`<div class="tl-line" style="background:${p.lc}"></div>`:''}</div><div class="tl-content"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px"><div class="tl-period" style="color:${p.color};margin-bottom:0">${p.period}</div>${cal}</div><div class="tl-title">${p.title}</div><div class="tl-skills">${p.skills.map(s=>`<span class="tl-skill" style="background:${p.color}18;border:1px solid ${p.color}44;color:${p.color}">${s}</span>`).join('')}</div><ul class="tl-items">${p.items.map(it=>`<li>${it}</li>`).join('')}</ul></div></div>`;
   }).join('');
-  const avgDebut=currentCourse==='eye'?12:18;
+  // ペース別デビュー月数
+  const paceMonths={fast:15,normal:18,slow:27};
+  const avgDebut=currentCourse==='eye'?12:paceMonths[currentPace]||18;
   const careerHTML=CAREER_STEPS[currentType].map((step,i)=>{
     const totalOff=avgDebut+step.months;
     const cal=joinInfo?(step.months===0?`<div style="font-size:10px;font-weight:700;color:white;background:${step.color};padding:2px 8px;border-radius:20px">${addMonths(joinInfo.year,joinInfo.month,avgDebut)}（平均）</div>`:`<div style="font-size:10px;font-weight:700;color:white;background:${step.color};padding:2px 8px;border-radius:20px">${addMonths(joinInfo.year,joinInfo.month,totalOff)}〜</div>`):'';
     const periodLabel=step.months===0?'デビュー':`デビュー+${step.months>=12?Math.floor(step.months/12)+'年'+(step.months%12?step.months%12+'ヶ月':''):step.months+'ヶ月'}`;
-    return`<div class="tl-phase"><div class="tl-left"><div class="tl-dot" style="background:${step.color};font-size:16px">${step.icon}</div>${i<CAREER_STEPS[currentType].length-1?`<div class="tl-line" style="background:${step.color}44"></div>`:''}</div><div class="tl-content"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px"><div class="tl-period" style="color:${step.color};margin-bottom:0">${periodLabel}</div>${cal}</div><div class="tl-title" style="color:${step.color}">${step.label}</div><div style="font-size:11px;line-height:1.7;color:var(--gray);font-weight:300;margin-top:4px">${step.desc}</div></div></div>`;
+    return`<div class="tl-phase"><div class="tl-left"><div class="tl-dot" style="background:${step.color};font-size:16px">${step.icon}</div>${i<CAREER_STEPS[currentType].length-1?`<div class="tl-line" style="background:${step.color}44"></div>`:''}</div><div class="tl-content"><div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:3px"><div class="tl-period" style="color:${step.color};margin-bottom:0">${periodLabel}</div>${cal}</div><div class="tl-title" style="color:${step.color}">${step.label}</div><div style="font-size:11px;line-height:1.8;color:var(--gray);font-weight:300;margin-top:4px;white-space:pre-line">${step.desc}</div></div></div>`;
   }).join('');
   document.getElementById('timeline').innerHTML=(msg?`<div class="personal-msg-box">💬 ${msg}</div>`:'')+`<div style="font-size:10px;letter-spacing:.2em;color:var(--rose);font-weight:700;margin-bottom:10px">── アシスタント期 ──</div>`+assistantHTML+`<div style="font-size:10px;letter-spacing:.2em;color:${t.color};font-weight:700;margin:16px 0 10px">── デビュー後のキャリア ──</div>`+careerHTML+`<div class="tl-goal"><div class="tl-goal-lbl">🏆 ${profile.name}さんの目指す姿</div><div class="tl-goal-txt">${goal}</div></div>`;
 }
 
+// ── 占いデータ（フル版）──
+function calcLifeNumber(dateStr){
+  if(!dateStr)return null;
+  var digits=dateStr.replace(/-/g,'').split('').map(Number);
+  var sum=digits.reduce(function(a,b){return a+b;},0);
+  while(sum>9&&sum!==11&&sum!==22){
+    sum=String(sum).split('').map(Number).reduce(function(a,b){return a+b;},0);
+  }
+  return sum;
+}
+function getZodiac(dateStr){
+  if(!dateStr)return null;
+  var parts=dateStr.split('-');
+  var m=parseInt(parts[1]),d=parseInt(parts[2]);
+  var signs=[
+    {name:'山羊座',icon:'♑',en:'Capricorn',start:[12,22],end:[1,19]},
+    {name:'水瓶座',icon:'♒',en:'Aquarius',start:[1,20],end:[2,18]},
+    {name:'魚座',icon:'♓',en:'Pisces',start:[2,19],end:[3,20]},
+    {name:'牡羊座',icon:'♈',en:'Aries',start:[3,21],end:[4,19]},
+    {name:'牡牛座',icon:'♉',en:'Taurus',start:[4,20],end:[5,20]},
+    {name:'双子座',icon:'♊',en:'Gemini',start:[5,21],end:[6,20]},
+    {name:'蟹座',icon:'♋',en:'Cancer',start:[6,21],end:[7,22]},
+    {name:'獅子座',icon:'♌',en:'Leo',start:[7,23],end:[8,22]},
+    {name:'乙女座',icon:'♍',en:'Virgo',start:[8,23],end:[9,22]},
+    {name:'天秤座',icon:'⚖️',en:'Libra',start:[9,23],end:[10,22]},
+    {name:'蠍座',icon:'♏',en:'Scorpio',start:[10,23],end:[11,21]},
+    {name:'射手座',icon:'♐',en:'Sagittarius',start:[11,22],end:[12,21]},
+  ];
+  var ZODIAC_MSG={
+    '山羊座':{talent:'努力家で着実に成長するタイプ。目標を決めたら必ず達成する意志の強さが武器！',paul:'PAULでも着実にステップアップして、気づけばトップになっているタイプ。'},
+    '水瓶座':{talent:'個性的で革新的なアイデアの持ち主。常識に縛られない発想で業界を驚かせる！',paul:'PAULの新しいスタイルやトレンドをどんどん取り入れて、唯一無二の存在になれます。'},
+    '魚座':{talent:'豊かな感受性と共感力が強み。お客様の気持ちを自分のことのように感じ取れる！',paul:'PAULでお客様一人一人に深く寄り添う、愛され続ける美容師になれます。'},
+    '牡羊座':{talent:'行動力とチャレンジ精神が抜群。怖いもの知らずで新しいことに飛び込める！',paul:'PAULに入社したら誰より早くデビューを目指して、どんどん挑戦していけるタイプ。'},
+    '牡牛座':{talent:'美的センスと継続力が武器。じっくり丁寧に磨いた技術は本物！',paul:'PAULのカリキュラムをコツコツ積み上げて、揺るぎない実力を持つスタイリストになれます。'},
+    '双子座':{talent:'コミュニケーション能力と適応力が抜群。誰とでもすぐ仲良くなれる！',paul:'PAULではお客様・先輩・後輩みんなに愛されるムードメーカー的存在になれます。'},
+    '蟹座':{talent:'面倒見が良く、人の心に寄り添う力が強み。チームの絆を深める存在！',paul:'PAULで後輩の育成や、常連客との深い信頼関係を築くのが得意なタイプ。'},
+    '獅子座':{talent:'華やかなオーラと強いリーダーシップが武器。自然と人が集まってくる！',paul:'PAULでデビューしたら、あっという間に人気スタイリストになれる素質がある。'},
+    '乙女座':{talent:'細部への気配りと完璧主義が強み。技術も接客も高水準を維持できる！',paul:'PAULのカリキュラムをしっかり習得して、高品質な施術で信頼されるスタイリストに。'},
+    '天秤座':{talent:'バランス感覚と審美眼が抜群。トレンドとお客様のニーズを完璧に調和させる！',paul:'PAULのクリエイティブな環境でセンスを磨いて、洗練されたスタイリストになれます。'},
+    '蠍座':{talent:'深い集中力と探求心が強み。一度決めたら絶対やり遂げる強い意志！',paul:'PAULで技術を極めることへの情熱が誰より強い。コンテストでも結果を出せるタイプ。'},
+    '射手座':{talent:'自由な発想と向上心が武器。常に高い目標を持って成長し続けられる！',paul:'PAULで次々と新しい技術や知識を吸収して、どんどん成長していけるタイプ。'},
+  };
+  for(var i=0;i<signs.length;i++){
+    var s=signs[i];
+    if((m===s.start[0]&&d>=s.start[1])||(m===s.end[0]&&d<=s.end[1])){
+      return {name:s.name,icon:s.icon,msg:ZODIAC_MSG[s.name]};
+    }
+  }
+  return {name:'山羊座',icon:'♑',msg:ZODIAC_MSG['山羊座']};
+}
+var TAROT_CARDS=[
+  {name:'星',icon:'⭐',msg:'希望と夢の実現を示すカード。あなたの未来は明るく輝いています！PAULで夢を叶える一歩を踏み出して。'},
+  {name:'太陽',icon:'☀️',msg:'成功と喜びを示すカード。あなたの明るいエネルギーが周りを照らします！PAULで才能が開花する予感。'},
+  {name:'月',icon:'🌙',msg:'直感と感受性を示すカード。あなたの豊かな感性が最大の武器！PAULでその感性を活かした美容師に。'},
+  {name:'世界',icon:'🌍',msg:'完成と達成を示すカード。大きな夢を持って行動すれば必ず叶います！PAULであなたの世界を広げて。'},
+  {name:'力',icon:'💪',msg:'強さと勇気を示すカード。困難を乗り越える力があなたの中にあります。PAULで強い美容師になれます！'},
+  {name:'魔術師',icon:'🪄',msg:'才能と可能性を示すカード。あなたにはまだ眠っている才能がたくさんある！PAULで開花させよう。'},
+  {name:'女帝',icon:'👸',msg:'豊かさと美を示すカード。あなたは美のプロとして輝く運命。PAULで美の世界のプロになれます！'},
+  {name:'審判',icon:'🔔',msg:'新しいスタートと覚醒を示すカード。今がまさに行動するとき！PAULへの就職が人生の転換点になります。'},
+  {name:'正義',icon:'⚖️',msg:'真実と公正を示すカード。誠実に努力した分だけ必ず報われます。PAULで正直に頑張れば必ず評価される！'},
+  {name:'運命の輪',icon:'☸️',msg:'チャンスと転機を示すカード。今がまさに運命の分岐点！PAULとの出会いが人生を変えるかも。'},
+];
+var LUCKY_COLORS=['ローズピンク🌸','コーラルオレンジ🧡','ゴールド✨','ラベンダー💜','ミントグリーン🌿','スカイブルー💙','パールホワイト🤍','バーガンディ❤️','テラコッタ🧡','セージグリーン💚'];
+var LUCKY_ITEMS=['ヘアアイロン💇','カラーブラシ🎨','ハンドクリーム💆','お気に入りのシザー✂️','スタイリング剤🧴','名刺入れ👜','手帳📓','お守り🧿','アクセサリー💎','パワーストーン🔮'];
+var PAUL_DEBUT_MSG=[
+  '今日のあなたのエネルギーなら、最短デビューも夢じゃない！積極的に練習に取り組もう。',
+  'デビューまでの道のりが見えてきた気がする日。具体的な目標を立てるのに最高のタイミング！',
+  'あなたのセンスが輝く時期。先輩スタイリストのスタイルをどんどん吸収しよう。',
+  '技術の習得が加速しそうな予感。難しい技術にチャレンジするのに良い日！',
+  'お客様との縁が深まる時期。カウンセリング力を磨くことに集中しよう。',
+  '仲間との絆が強まる時期。同期や先輩との関係を大切にすると良いことがある。',
+  '自分の強みが発揮される日。得意なことを伸ばすことに集中してみて！',
+];
+var LIFE_NUMBER_MSG={
+  1:{name:'リーダー数',icon:'👑',msg:'生まれながらのリーダー！美容師として独自の世界観を持ち、周りを引っ張る存在になる運命です。'},
+  2:{name:'協調数',icon:'🤝',msg:'人の気持ちを読む天才。お客様との深い信頼関係を築いて、長く愛される美容師になれます。'},
+  3:{name:'表現数',icon:'✨',msg:'創造性と表現力が武器！SNS発信やクリエイティブな仕事で才能が輝きます。'},
+  4:{name:'安定数',icon:'🏗',msg:'コツコツ努力する力が強み。確実に技術を積み上げて、揺るぎない実力を持つ美容師になれます。'},
+  5:{name:'自由数',icon:'🌟',msg:'変化を楽しむ自由人。トレンドの移り変わりを楽しみながら、常に新しいスタイルを提案できます。'},
+  6:{name:'愛情数',icon:'💖',msg:'人を癒す才能があります。お客様の心に寄り添い、「また来たい」と思ってもらえる美容師になれます。'},
+  7:{name:'探究数',icon:'🔍',msg:'深く追求する力が強み。技術の理論や美容の本質を追い求め、スペシャリストとして輝けます。'},
+  8:{name:'成功数',icon:'💰',msg:'成功と豊かさを引き寄せる数字。美容師として実力をしっかり収入に変える力があります。'},
+  9:{name:'完成数',icon:'🌈',msg:'すべての経験を統合する力があります。多様なお客様と関わり、多くの人の人生に関われる美容師になれます。'},
+  11:{name:'直感数',icon:'⚡',msg:'鋭い直感と感性の持ち主。トレンドをいち早くキャッチして、時代の先を行く美容師になれます。'},
+  22:{name:'マスター数',icon:'🏆',msg:'大きな夢を実現する力の持ち主。美容師として大きなビジョンを描き、業界に貢献できる存在になれます。'},
+};
+var BLOOD_MSG={
+  'A':{icon:'🩸',name:'A型',style:'完璧主義なこだわり派',msg:'丁寧で几帳面なA型は、技術の細部にこだわる美容師タイプ。お客様への気遣いも抜群で、信頼されるスタイリストになれます！'},
+  'B':{icon:'🩸',name:'B型',style:'自由な発想のクリエイター',msg:'自分のペースで突き進むB型は、独自のスタイルを持つ個性派美容師タイプ。SNS発信やクリエイティブな仕事で才能が爆発します！'},
+  'O':{icon:'🩸',name:'O型',style:'人情味あふれるムードメーカー',msg:'大らかで面倒見のいいO型は、お客様もスタッフも引きつけるムードメーカー美容師タイプ。指名客もスタッフからの信頼も自然に集まります！'},
+  'AB':{icon:'🩸',name:'AB型',style:'二面性を持つ天才型',msg:'論理的でかつ感性豊かなAB型は、技術と接客どちらも高レベルな天才型美容師タイプ。分析力と直感で最高の提案ができます！'},
+  '不明':{icon:'🩸',name:'血液型不明',style:'ミステリアスな個性派',msg:'血液型に縛られないあなたは、ジャンルを超えた個性が武器。自分だけのスタイルで唯一無二の美容師になれます！'},
+};
+function getTodayFortune(name){
+  var today=new Date();
+  var seed=today.getFullYear()*10000+((today.getMonth()+1)*100)+today.getDate();
+  var n=name||'';
+  for(var i=0;i<n.length;i++)seed+=n.charCodeAt(i);
+  var fortunes=[
+    {star:'⭐⭐⭐⭐⭐',label:'絶好調！',msg:'今日は最高の就活デーです！PAULのスタッフと話すと、あなたの魅力が120%伝わります。積極的に話しかけてみて！'},
+    {star:'⭐⭐⭐⭐',label:'好調！',msg:'今日はコミュニケーション運が高め。就職フェアで気になる先輩スタッフに話しかけるチャンスです！'},
+    {star:'⭐⭐⭐⭐',label:'上昇中！',msg:'今日はあなたの個性が輝く日。自分らしさをそのまま出してみて。それがPAULでは一番の武器になります！'},
+    {star:'⭐⭐⭐',label:'安定！',msg:'今日は落ち着いて自分と向き合える日。今の自分の強みをじっくり確認して、それをそのまま伝えてみて！'},
+    {star:'⭐⭐⭐⭐⭐',label:'ラッキーデー！',msg:'今日という日にPAULと出会ったのは運命かもしれません！気になることは全部聞いてみて！'},
+    {star:'⭐⭐⭐⭐',label:'チャンス！',msg:'今日は直感を信じて行動する日。気になるサロンがあったら勇気を出して一歩踏み出してみて！'},
+    {star:'⭐⭐⭐',label:'じっくりデー',msg:'今日は情報収集に向いている日。PAULのことをしっかりリサーチして、自分に合うか確認してみて！'},
+  ];
+  var tarot=TAROT_CARDS[seed%TAROT_CARDS.length];
+  var lucky_color=LUCKY_COLORS[(seed+3)%LUCKY_COLORS.length];
+  var lucky_item=LUCKY_ITEMS[(seed+7)%LUCKY_ITEMS.length];
+  var debut_msg=PAUL_DEBUT_MSG[(seed+1)%PAUL_DEBUT_MSG.length];
+  return {fortune:fortunes[seed%fortunes.length],tarot:tarot,lucky_color:lucky_color,lucky_item:lucky_item,debut_msg:debut_msg};
+}
+
 function renderResult(){
-  const score={S:0,T:0,C:0,L:0};
+  const score={A:0,B:0,C:0,D:0,E:0,F:0,G:0,H:0};
   [ans.q1,ans.q2,ans.q5].forEach(v=>{if(v&&score[v]!==undefined)score[v]++});
-  let best='S',top=0;
+  let best='A',top=0;
   for(const[k,v] of Object.entries(score)){if(v>top){top=v;best=k}}
   currentType=best;
   const t=TYPES[best];
@@ -480,7 +757,11 @@ function renderResult(){
   const hasMbti=Object.values(mbtiAns).every(v=>v!==null);
   let mbtiCode='';
   if(hasMbti){mbtiCode=mbtiAns.EI+mbtiAns.SN+mbtiAns.TF+mbtiAns.JP;document.getElementById('mbti-display').textContent=mbtiCode;document.getElementById('mbti-type-name').textContent=MBTI_NAMES[mbtiCode]?`— ${MBTI_NAMES[mbtiCode]}`:'';const msgs=MBTI_MSGS[best];document.getElementById('mbti-msg').textContent=(msgs.EI[mbtiAns.EI]||'')+'\n\n'+(msgs.TF[mbtiAns.TF]||'');document.getElementById('mbti-block').style.display='block';}
-  currentCourse='basic';document.querySelectorAll('.course-card').forEach(c=>c.classList.remove('on'));document.getElementById('cc-basic').classList.add('on');
+  currentCourse='basic';currentPace='fast';
+  document.querySelectorAll('.course-card').forEach(c=>c.classList.remove('on'));document.getElementById('cc-basic').classList.add('on');
+  document.querySelectorAll('.pace-btn').forEach(b=>{b.style.background='white';b.style.borderColor='rgba(232,150,142,.3)';});
+  const fastBtn=document.getElementById('pace-fast');
+  if(fastBtn){fastBtn.style.background='rgba(130,176,130,.12)';fastBtn.style.borderColor='#82b082';}
   renderTimeline();
   if(ans.q6==='real')document.getElementById('chip-real').style.fontWeight='700';
   else if(ans.q6==='online')document.getElementById('chip-online').style.fontWeight='700';
@@ -511,6 +792,79 @@ function renderResult(){
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify(record)
   }).catch(()=>{});
+  // 占いカード表示
+  var fortuneBlock=document.getElementById('fortune-block');
+  if(fortuneBlock){
+    var lifeNum=calcLifeNumber(profile.birthday);
+    var zodiac=profile.birthday?getZodiac(profile.birthday):null;
+    var bloodData=BLOOD_MSG[profile.blood]||null;
+    var fortuneData=getTodayFortune(profile.name);
+    var tf=fortuneData.fortune,tarot=fortuneData.tarot;
+    var lc=fortuneData.lucky_color,li=fortuneData.lucky_item,dm=fortuneData.debut_msg;
+    var fHTML='<div style="background:linear-gradient(135deg,rgba(168,156,212,.15),rgba(245,200,66,.1));border:2px solid rgba(168,156,212,.3);border-radius:22px;padding:20px;margin-bottom:14px">';
+    fHTML+='<div style="font-size:14px;font-weight:700;letter-spacing:.15em;color:#7060a0;margin-bottom:16px;text-align:center">🔮 あなたの美容師占い</div>';
+    // 今日の就活運
+    fHTML+='<div style="background:linear-gradient(135deg,rgba(245,200,66,.25),rgba(245,168,96,.18));border-radius:14px;padding:14px 16px;margin-bottom:10px">';
+    fHTML+='<div style="font-size:11px;font-weight:700;color:#a08030;margin-bottom:6px">📅 今日の就活運</div>';
+    fHTML+='<div style="font-size:20px;margin-bottom:4px">'+tf.star+'</div>';
+    fHTML+='<div style="font-size:14px;font-weight:700;color:#8a6020;margin-bottom:6px">'+tf.label+'</div>';
+    fHTML+='<div style="font-size:12px;line-height:1.9;color:#363030;font-weight:300">'+tf.msg+'</div>';
+    fHTML+='</div>';
+    // タロットカード
+    fHTML+='<div style="background:linear-gradient(135deg,rgba(168,156,212,.2),rgba(125,212,184,.1));border-radius:14px;padding:14px 16px;margin-bottom:10px">';
+    fHTML+='<div style="font-size:11px;font-weight:700;color:#6050a0;margin-bottom:8px">🃏 今日のタロットカード</div>';
+    fHTML+='<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">';
+    fHTML+='<span style="font-size:36px;background:white;border-radius:10px;padding:8px 12px;box-shadow:0 2px 8px rgba(0,0,0,.1)">'+tarot.icon+'</span>';
+    fHTML+='<div><div style="font-size:15px;font-weight:700;color:#5040a0">「'+tarot.name+'」のカード</div>';
+    fHTML+='<div style="font-size:10px;color:#7a7170;margin-top:2px">あなたへのメッセージ</div></div></div>';
+    fHTML+='<div style="font-size:12px;line-height:1.9;color:#363030;font-weight:300">'+tarot.msg+'</div>';
+    fHTML+='</div>';
+    // ラッキーカラー＆アイテム
+    fHTML+='<div style="display:flex;gap:8px;margin-bottom:10px">';
+    fHTML+='<div style="flex:1;background:white;border-radius:14px;padding:12px;text-align:center">';
+    fHTML+='<div style="font-size:10px;font-weight:700;color:#c06060;margin-bottom:6px">🎨 ラッキーカラー</div>';
+    fHTML+='<div style="font-size:13px;font-weight:700;color:#363030">'+lc+'</div></div>';
+    fHTML+='<div style="flex:1;background:white;border-radius:14px;padding:12px;text-align:center">';
+    fHTML+='<div style="font-size:10px;font-weight:700;color:#408060;margin-bottom:6px">🎁 ラッキーアイテム</div>';
+    fHTML+='<div style="font-size:13px;font-weight:700;color:#363030">'+li+'</div></div></div>';
+    // PAULでの開花運
+    fHTML+='<div style="background:linear-gradient(135deg,rgba(232,150,142,.15),rgba(192,96,96,.08));border-radius:14px;padding:14px 16px;margin-bottom:10px">';
+    fHTML+='<div style="font-size:11px;font-weight:700;color:#c06060;margin-bottom:6px">✂️ PAULでの開花運</div>';
+    fHTML+='<div style="font-size:12px;line-height:1.9;color:#363030;font-weight:300">'+dm+'</div></div>';
+    // 星座（生年月日あれば）
+    if(zodiac){
+      fHTML+='<div style="background:white;border-radius:14px;padding:14px 16px;margin-bottom:10px">';
+      fHTML+='<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">';
+      fHTML+='<span style="font-size:28px">'+zodiac.icon+'</span>';
+      fHTML+='<div><div style="font-size:11px;font-weight:700;color:#5050b0">⭐ '+zodiac.name+'の美容師運</div>';
+      fHTML+='<div style="font-size:10px;color:#7a7170;font-weight:300;margin-top:2px">星座別 才能診断</div></div></div>';
+      fHTML+='<div style="font-size:12px;line-height:1.8;color:#363030;font-weight:300;margin-bottom:6px">'+zodiac.msg.talent+'</div>';
+      fHTML+='<div style="font-size:11px;line-height:1.8;color:#7060a0;font-weight:300;background:rgba(112,96,160,.08);border-radius:8px;padding:8px 10px">'+zodiac.msg.paul+'</div>';
+      fHTML+='</div>';
+    }
+    // 運命数（生年月日あれば）
+    if(lifeNum&&LIFE_NUMBER_MSG[lifeNum]){
+      var ln=LIFE_NUMBER_MSG[lifeNum];
+      fHTML+='<div style="background:white;border-radius:14px;padding:14px 16px;margin-bottom:10px">';
+      fHTML+='<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">';
+      fHTML+='<span style="font-size:28px">'+ln.icon+'</span>';
+      fHTML+='<div><div style="font-size:11px;font-weight:700;color:#7060a0">🔢 運命数 '+lifeNum+'：'+ln.name+'</div>';
+      fHTML+='<div style="font-size:10px;color:#7a7170;font-weight:300;margin-top:2px">数秘術による美容師運命診断</div></div></div>';
+      fHTML+='<div style="font-size:12px;line-height:1.9;color:#363030;font-weight:300">'+ln.msg+'</div></div>';
+    }
+    // 血液型（選択してれば）
+    if(bloodData){
+      fHTML+='<div style="background:white;border-radius:14px;padding:14px 16px">';
+      fHTML+='<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">';
+      fHTML+='<span style="font-size:28px">'+bloodData.icon+'</span>';
+      fHTML+='<div><div style="font-size:11px;font-weight:700;color:#c06060">🩸 '+bloodData.name+'：'+bloodData.style+'</div>';
+      fHTML+='<div style="font-size:10px;color:#7a7170;font-weight:300;margin-top:2px">血液型別 美容師スタイル診断</div></div></div>';
+      fHTML+='<div style="font-size:12px;line-height:1.9;color:#363030;font-weight:300">'+bloodData.msg+'</div></div>';
+    }
+    fHTML+='</div>';
+    fortuneBlock.innerHTML=fHTML;
+    fortuneBlock.style.display='block';
+  }
   showScr('result');
 }
 
